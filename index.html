@@ -1,131 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>McDonalds Logo Canvas</title>
+  <meta charset="UTF-8" />
+  <title>McDonald's Logo – Canvas</title>
   <style>
+    body {
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
     canvas {
-      border: 1px solid #ccc;
       display: block;
-      margin: 20px auto;
+      margin: 40px auto;
+      background: white;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
-  <canvas id="logoCanvas" width="1200" height="900"></canvas>
 
-  <script>
-    var SVGIcons = {
-      "McDonalds.svg": {
-        draw: function(ctx) {
-        ctx.save();
-        ctx.strokeStyle = "rgba(0,0,0,0)";
-        ctx.miterLimit = 4;
-        ctx.font = "15px ''";
-        ctx.scale(0.07, 0.07);   // rounded
-        ctx.save();
-        ctx.fillStyle = "#FFCC00";
-        ctx.translate(341.00, 4.63); // rounded
-        ctx.beginPath();
-        ctx.moveTo(0.00, 0.00);
-        ctx.bezierCurveTo(1.02, 0.00, 1.02, 0.00, 2.06, 0.00);
-        ctx.bezierCurveTo(13.43, 0.04, 24.10, 1.00, 35.00, 4.38);
-        ctx.bezierCurveTo(35.66, 4.57, 36.32, 4.77, 37.00, 4.98);
-        ctx.bezierCurveTo(60.51, 12.31, 80.75, 26.20, 99.00, 42.38);
-        ctx.bezierCurveTo(99.54, 42.85, 100.08, 43.33, 100.64, 43.82);
-        ctx.bezierCurveTo(112.53, 54.38, 123.14, 65.90, 133.00, 78.38);
-        ctx.bezierCurveTo(133.74, 79.30, 134.49, 80.22, 135.25, 81.18);
-        ctx.bezierCurveTo(153.49, 104.31, 168.78, 129.61, 182.53, 155.60);
-        ctx.bezierCurveTo(183.84, 158.07, 185.17, 160.51, 186.51, 162.96);
-        ctx.bezierCurveTo(216.13, 217.20, 236.07, 277.21, 254.06, 336.13);
-        ctx.bezierCurveTo(255.94, 342.24, 257.95, 348.31, 260.00, 354.38);
-        ctx.bezierCurveTo(260.23, 353.55, 260.47, 352.73, 260.71, 351.89);
-        ctx.bezierCurveTo(282.25, 276.95, 308.87, 203.08, 348.00, 135.38);
-        ctx.bezierCurveTo(348.47, 134.56, 348.94, 133.74, 349.42, 132.90);
-        ctx.bezierCurveTo(354.64, 123.84, 360.04, 114.97, 366.00, 106.38);
-        ctx.bezierCurveTo(366.66, 105.42, 366.66, 105.42, 367.34, 104.44);
-        ctx.bezierCurveTo(374.22, 94.48, 381.31, 84.73, 389.00, 75.38);
-        ctx.bezierCurveTo(389.48, 74.79, 389.96, 74.21, 390.45, 73.60);
-        ctx.bezierCurveTo(402.54, 59.02, 415.78, 44.72, 431.00, 33.38);
-        ctx.bezierCurveTo(432.05, 32.58, 433.10, 31.79, 434.18, 30.97);
-        ctx.bezierCurveTo(465.53, 7.69, 501.31, -4.27, 540.56, 0.99);
-        ctx.bezierCurveTo(574.61, 6.87, 602.42, 28.69, 626.25, 52.38);
-        ctx.bezierCurveTo(627.17, 53.29, 628.10, 54.20, 629.05, 55.14);
-        ctx.bezierCurveTo(635.12, 61.25, 640.68, 67.60, 646.00, 74.38);
-        ctx.bezierCurveTo(646.62, 75.16, 647.23, 75.94, 647.87, 76.74);
-        ctx.bezierCurveTo(669.99, 105.18, 687.87, 136.23, 704.00, 168.38);
-        ctx.bezierCurveTo(704.53, 169.43, 705.07, 170.49, 705.62, 171.59);
-        ctx.bezierCurveTo(721.44, 203.11, 734.41, 235.88, 746.19, 269.10);
-        ctx.bezierCurveTo(746.98, 271.32, 747.77, 273.53, 748.56, 275.75);
-        ctx.bezierCurveTo(779.43, 362.48, 799.71, 452.68, 854.00, 903.38);
-        ctx.bezierCurveTo(854.05, 904.38, 854.05, 904.38, 854.09, 905.41);
-        ctx.bezierCurveTo(855.33, 932.03, 856.04, 958.64, 856.12, 985.29);
-        ctx.bezierCurveTo(856.12, 986.50, 856.12, 986.50, 856.12, 987.75);
-        ctx.bezierCurveTo(856.17, 1005.62, 856.06, 1023.50, 856.00, 1041.38);
-        ctx.bezierCurveTo(806.50, 1041.38, 757.00, 1041.38, 706.00, 1041.38);
-        ctx.bezierCurveTo(705.71, 1024.13, 705.42, 1006.89, 705.13, 989.13);
-        ctx.bezierCurveTo(704.94, 978.65, 704.76, 968.18, 704.56, 957.71);
-        ctx.bezierCurveTo(704.54, 956.45, 704.52, 955.19, 704.49, 953.89);
-        ctx.bezierCurveTo(702.84, 865.28, 699.05, 776.73, 554.56, 91.50);
-        ctx.bezierCurveTo(544.52, 81.87, 532.09, 75.24, 518.00, 75.38);
-        ctx.bezierCurveTo(505.00, 76.25, 494.51, 82.87, 485.00, 91.38);
-        ctx.bezierCurveTo(484.26, 92.03, 483.53, 92.68, 482.77, 93.36);
-        ctx.bezierCurveTo(471.04, 104.42, 462.79, 118.42, 455.00, 132.38);
-        ctx.bezierCurveTo(454.63, 133.02, 454.26, 133.67, 453.88, 134.33);
-        ctx.bezierCurveTo(415.04, 202.69, 398.74, 286.18, 384.00, 362.38);
-        ctx.bezierCurveTo(383.80, 363.39, 383.61, 364.41, 383.40, 365.45);
-        ctx.bezierCurveTo(367.18, 449.49, 356.87, 534.61, 339.18, 770.58);
-        ctx.bezierCurveTo(339.02, 774.03, 338.85, 777.47, 338.67, 780.91);
-        ctx.bezierCurveTo(337.27, 809.19, 336.60, 837.50, 335.94, 865.81);
-        ctx.bezierCurveTo(335.92, 866.69, 335.90, 867.56, 335.88, 868.46);
-        ctx.bezierCurveTo(335.11, 901.43, 334.57, 934.40, 334.00, 967.38);
-        ctx.bezierCurveTo(284.50, 967.38, 235.00, 967.38, 184.00, 967.38);
-        ctx.bezierCurveTo(183.81, 948.50, 183.81, 948.50, 183.63, 929.25);
-        ctx.bezierCurveTo(183.54, 921.39, 183.45, 913.54, 183.34, 905.68);
-        ctx.bezierCurveTo(183.33, 904.72, 183.32, 903.75, 183.30, 902.75);
-        ctx.bezierCurveTo(182.90, 872.61, 182.09, 842.49, 181.00, 812.38);
-        ctx.bezierCurveTo(180.98, 811.69, 180.95, 811.00, 180.92, 810.28);
-        ctx.bezierCurveTo(178.22, 735.69, 173.42, 661.17, 71.00, 146.38);
-        ctx.bezierCurveTo(70.52, 145.39, 70.03, 144.40, 69.53, 143.38);
-        ctx.bezierCurveTo(61.10, 126.34, 51.58, 110.70, 39.00, 96.38);
-        ctx.bezierCurveTo(38.39, 95.67, 37.78, 94.97, 37.16, 94.24);
-        ctx.bezierCurveTo(27.38, 83.68, 14.34, 76.28, -0.11, 75.31);
-        ctx.bezierCurveTo(-15.52, 75.65, -26.61, 83.96, -37.00, 94.38);
-        ctx.bezierCurveTo(-37.78, 95.15, -38.57, 95.92, -39.38, 96.71);
-        ctx.bezierCurveTo(-99.00, 159.00, -116.29, 279.24, -184.28, 982.19);
-        ctx.bezierCurveTo(-184.29, 983.02, -184.30, 983.85, -184.31, 984.70);
-        ctx.bezierCurveTo(-184.56, 1003.59, -184.78, 1022.48, -185.00, 1041.38);
-        ctx.bezierCurveTo(-234.83, 1041.38, -284.66, 1041.38, -336.00, 1041.38);
-        ctx.bezierCurveTo(-336.00, 991.10, -336.00, 991.10, -335.69, 976.44);
-        ctx.bezierCurveTo(-335.67, 975.46, -335.65, 974.48, -335.63, 973.47);
-        ctx.bezierCurveTo(-333.94, 894.00, -329.22, 814.67, -200.00, 203.38);
-        ctx.bezierCurveTo(-199.62, 202.51, -199.25, 201.65, -198.86, 200.77);
-        ctx.bezierCurveTo(-178.76, 154.83, -155.00, 110.21, -123.00, 71.38);
-        ctx.bezierCurveTo(-122.26, 70.45, -121.53, 69.53, -120.77, 68.58);
-        ctx.bezierCurveTo(-108.26, 53.28, -94.13, 38.84, -78.00, 27.38);
-        ctx.bezierCurveTo(-77.44, 26.96, -76.87, 26.55, -76.29, 26.12);
-        ctx.bezierCurveTo(-53.77, 9.67, -27.95, -0.04, 0.00, 0.00);
+<canvas id="logoCanvas" width="600" height="400"></canvas>
 
-            
-          ctx.closePath();
-          ctx.fill();
-          ctx.stroke();
-          ctx.restore();
-          ctx.restore();
-        }
-      }
-    };
+<script>
+  const canvas = document.getElementById("logoCanvas");
+  const ctx = canvas.getContext("2d");
 
-    // Register and draw
-    function registerImage(name, icon) {
-      var canvas = document.getElementById("logoCanvas");
-      var ctx = canvas.getContext("2d");
-      icon.draw(ctx);
-    }
+  function drawMcDonaldsLogo(ctx) {
+    ctx.save();
 
-    for (var name in SVGIcons) {
-      registerImage(name, SVGIcons[name]);
-    }
-  </script>
+    // Center logo
+    ctx.translate(100, 60);
+    ctx.scale(1.2, 1.2);
+
+    ctx.fillStyle = "#ffcc00"; // McDonald's yellow
+    ctx.beginPath();
+
+    // Left arch
+    ctx.moveTo(194.5, 16.8);
+    ctx.bezierCurveTo(217.8, 16.8, 236.7, 115.1, 236.7, 236.5);
+    ctx.lineTo(270.7, 236.5);
+    ctx.bezierCurveTo(270.7, 105.8, 236.4, 0, 194.4, 0);
+    ctx.bezierCurveTo(170.4, 0, 149.2, 31.7, 135.2, 81.5);
+
+    // Middle dip
+    ctx.bezierCurveTo(121.2, 31.7, 100, 0, 76.2, 0);
+
+    // Right arch
+    ctx.bezierCurveTo(34.2, 0, 0, 105.7, 0, 236.4);
+    ctx.lineTo(34, 236.4);
+    ctx.bezierCurveTo(34, 115, 52.7, 16.8, 76, 16.8);
+    ctx.bezierCurveTo(99.3, 16.8, 118.2, 107.6, 118.2, 219.6);
+    ctx.lineTo(152, 219.6);
+    ctx.bezierCurveTo(152, 107.6, 171, 16.8, 194.5, 16.8);
+
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  }
+
+  drawMcDonaldsLogo(ctx);
+</script>
+
 </body>
 </html>
