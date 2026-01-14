@@ -1,0 +1,214 @@
+:root {
+  --red: #DA291C;
+  --yellow: #FFC72C;
+  --white: #ffffff;
+  --dark: #222;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle, var(--yellow) 0%, var(--white) 210%);
+  margin: 0;
+  padding: 0;
+}
+
+#postavitev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.sirina {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.obrazec {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 30px;
+  text-align: center;
+  padding-bottom: 20px; 
+}
+
+.close-btn {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+    /* Poskrbimo, da je obrazec relativno pozicioniran, da križec deluje */
+.obrazec {
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  max-width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 50%; /* da je krožen */
+}
+
+.logo-img:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+h1 {
+  color: var(--dark);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.sub {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.link {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.field {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Dodatni elementi za registracijo */
+.field select,
+.field input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+
+.btn {
+  background-color: var(--yellow);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px; 
+}
+
+
+
+
+/* Razdelilnik med prijavo in družbenimi omrežji */
+.hr {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.hr span {
+  background: #fff;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.hr::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ccc;
+  z-index: 0;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  margin-top: 10px; 
+}
+
+.social img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+.apple {
+  background-color: #000;
+}
+
+.noga {
+  margin-top: 30px; 
+  font-size: 13px;
+  color: #666;
+}
+
+/* responsive za telefone z zaslonom širine 480px ali manj */
+@media screen and (max-width: 480px) {
+  .obrazec {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .social a {
+    font-size: 14px;
+  }
+
+  .field label {
+    font-size: 14px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+  }
+}
