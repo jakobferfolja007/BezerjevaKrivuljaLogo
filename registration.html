@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <title>McDonald's — Ustvari račun</title>
+  <meta name="odzivnost" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style3.css">
+  <link rel="icon" href="img/mecdonalds.ico" type="image/icon-x">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="JS/register.js"></script>
+
+</head>
+<body>
+  <div id="postavitev">
+    <div class="sirina">
+      <div class="obrazec" role="main">
+        <!-- Križec za zapiranje -->
+        <a href="index.html" class="close-btn" title="Zapri">×</a>
+
+        <div class="logo">
+          <img src="img/McDonald's-Logo.svg" alt="Logo" class="logo-img" onclick="sporocilo(event)">
+        </div>
+        <h1 id="title">USTVARI RAČUN</h1>
+        <div class="sub">Že imate račun? <a class="link" href="login.html">Prijavite se</a></div>
+        
+        <form id="createAccountForm" method="post">
+          <div class="field">
+            <label for="first-name">Ime</label>
+            <input id="first-name" name="first-name" type="text" placeholder="Ime" maxlength="7" required>
+          </div>
+
+          <div class="field">
+            <label for="surname">Priimek</label>
+            <input id="surname" name="surname" type="text" placeholder="Priimek" maxlength="7" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Elektronska pošta</label>
+            <input id="email" name="email" type="email" placeholder="ime@gmail.com" maxlength="30" required>
+          </div>
+
+          <div class="field">
+            <label for="password">Geslo</label>
+            <input id="password" name="password" type="password" placeholder="Vnesite geslo" minlength="5" maxlength="10" required>
+          </div>
+
+          <div class="field">
+            <label for="confirm-password">Potrdite geslo</label>
+            <input id="confirm-password" name="confirm-password" type="password" placeholder="Potrdite geslo" minlength="5" maxlength="10" required>
+          </div>
+
+          <div class="field">
+            <label for="dob">Datum rojstva</label>
+            <input id="dob" name="dob" type="date" required>
+          </div>
+
+          <div class="field">
+            <label for="country">Država</label>
+            <select id="country" name="country" required>
+              <option value="" disabled selected>Izberite svojo državo</option>
+              <option value="Slovenia">Slovenija</option>
+              <option value="Afghanistan">Afganistan</option>
+              <option value="Albania">Albanija</option>
+              <option value="Algeria">Alžirija</option>
+              <option value="Andorra">Andora</option>
+              <option value="Angola">Angola</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armenia">Armenija</option>
+              <option value="Australia">Avstralija</option>
+              <option value="Austria">Avstrija</option>
+              <option value="Azerbaijan">Azerbajdžan</option>
+              <option value="Bahamas">Bahami</option>
+              <option value="Bahrain">Bahrajn</option>
+              <option value="Bangladesh">Bangladeš</option>
+              <option value="Barbados">Barbados</option>
+              <option value="Belarus">Belorusija</option>
+              <option value="Belgium">Belgija</option>
+              <option value="Belize">Belize</option>
+              <option value="Benin">Benin</option>
+              <option value="Bhutan">Butan</option>
+              <option value="Bolivia">Bolivija</option>
+              <option value="Bosnia and Herzegovina">Bosna in Hercegovina</option>
+              <option value="Botswana">Bocvana</option>
+              <option value="Brazil">Brazilija</option>
+              <option value="Brunei">Brunej</option>
+              <option value="Bulgaria">Bolgarija</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cambodia">Kambodža</option>
+              <option value="Cameroon">Kamerun</option>
+              <option value="Canada">Kanada</option>
+              <option value="Chile">Čile</option>
+              <option value="China">Kitajska</option>
+              <option value="Colombia">Kolumbija</option>
+              <option value="Croatia">Hrvaška</option>
+              <option value="Cuba">Kuba</option>
+              <option value="Cyprus">Ciper</option>
+              <option value="Czech Republic">Češka</option>
+              <option value="Denmark">Danska</option>
+              <option value="Dominican Republic">Dominikanska republika</option>
+              <option value="Ecuador">Ekvador</option>
+              <option value="Egypt">Egipt</option>
+              <option value="Estonia">Estonija</option>
+              <option value="Finland">Finska</option>
+              <option value="France">Francija</option>
+              <option value="Germany">Nemčija</option>
+              <option value="Greece">Grčija</option>
+              <option value="Hungary">Madžarska</option>
+              <option value="Iceland">Islandija</option>
+              <option value="India">Indija</option>
+              <option value="Indonesia">Indonezija</option>
+              <option value="Iran">Iran</option>
+              <option value="Iraq">Irak</option>
+              <option value="Ireland">Irska</option>
+              <option value="Israel">Izrael</option>
+              <option value="Italy">Italija</option>
+              <option value="Japan">Japonska</option>
+              <option value="Kenya">Kenija</option>
+              <option value="Latvia">Latvija</option>
+              <option value="Lithuania">Litva</option>
+              <option value="Luxembourg">Luksemburg</option>
+              <option value="Malaysia">Malezija</option>
+              <option value="Malta">Malta</option>
+              <option value="Mexico">Mehika</option>
+              <option value="Morocco">Maroko</option>
+              <option value="Netherlands">Nizozemska</option>
+              <option value="New Zealand">Nova Zelandija</option>
+              <option value="Nigeria">Nigerija</option>
+              <option value="Norway">Norveška</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Philippines">Filipini</option>
+              <option value="Poland">Poljska</option>
+              <option value="Portugal">Portugalska</option>
+              <option value="Qatar">Katar</option>
+              <option value="Romania">Romunija</option>
+              <option value="Russia">Rusija</option>
+              <option value="Saudi Arabia">Saudova Arabija</option>
+              <option value="Serbia">Srbija</option>
+              <option value="Singapore">Singapur</option>
+              <option value="Slovakia">Slovaška</option>
+              <option value="South Africa">Južna Afrika</option>
+              <option value="South Korea">Južna Koreja</option>
+              <option value="Spain">Španija</option>
+              <option value="Sweden">Švedska</option>
+              <option value="Switzerland">Švica</option>
+              <option value="Thailand">Tajska</option>
+              <option value="Turkey">Turčija</option>
+              <option value="Ukraine">Ukrajina</option>
+              <option value="United Arab Emirates">Združeni Arabski Emirati</option>
+              <option value="United Kingdom">Združeno kraljestvo</option>
+              <option value="United States">Združene države</option>
+              <option value="Vietnam">Vietnam</option>
+              <option value="Zambia">Zambija</option>
+              <option value="Zimbabwe">Zimbabve</option>
+            </select>
+          </div>
+
+          <input class="btn" type="submit" value="USTVARI RAČUN">
+
+          <div class="hr"><span>Ali</span></div>
+
+          <div class="social">
+            <a href="#" role="button"><img src="img/fbLogo.svg" alt="Facebook Logo">Prijava preko Facebooka</a>
+            <a href="#" role="button"><img src="img/googleLogo.svg" alt="Google Logo">Prijava preko Googla</a>
+            <a href="#" class="apple" role="button" style="color: #fff;"><img src="img/appleLogo.svg" alt="Apple Logo">Prijava preko Appla</a>
+          </div>
+        </form>
+
+        <div class="noga">
+          Imate težave pri registraciji? <a href="#">Dobite pomoč</a>
+          <div style="margin-top:8px;font-size:12px;color:#666">
+            Dostop do <a href="index.html">McWeb</a>, <a href="#">Ticketing</a>, 
+            <a href="#">McDonalds</a> 
+          </div>
+          <div style="margin-top:10px;font-size:12px;color:#aaa">
+            © 2025 - Identiteta McDonalds - <a href="#">Politika zasebnosti</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
