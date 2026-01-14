@@ -11,14 +11,6 @@ Stran prikazuje osnovno strukturo menija in promocijskega bannerja, kot ga najde
 
 ---
 
-## 📸 Vizualni prikaz
-
-<div style="text-align: center;">
-  <p>Primer promocijskega bannerja in menija</p>
-  <img src="img/McDonaldsMockup.png" alt="McDonaldsMockup" style="height: 400px;">
-</div>
-
----
 
 ## 🎯 Namen projekta
 
