@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8">
+  <title>McDonald's Prijava</title>
+  <meta name="odzivnost" content="width=device-width, initial-scale=1.0"> <!-- da je stran responsive -->
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="icon" href="img/mecdonalds.ico" type="image/icon-x">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><!-- Vključi knjižnico SweetAlert2 za prikaz obvestil -->
+  <script src="JS/login.js"></script>
+</head>
+<body>
+  <div id="postavitev">
+    <div class="sirina">
+      <div class="obrazec" role="main">
+        <a href="index.html" class="close-btn" title="Zapri">×</a>
+        <div class="logo">
+          <img src="img/McDonald's-Logo.svg" alt="Logo" class="logo-img" onclick="sporocilo(event)">
+        </div>
+        <h1 id="title">PRIJAVA</h1>
+        <div class="sub">Nimate računa? <a class="link" href="registration.html">Ustvarite račun</a></div>
+        
+        <form id="loginForm" action="#" method="post">
+          <div class="field">
+            <label for="email">Elektronska pošta ali Uporabniško ime</label>
+            <input id="email" name="email" type="email" placeholder="ime@gmail.com" required>
+          </div>
+
+          <div class="field">
+            <label for="password">Geslo</label>
+            <input id="password" name="password" type="password" placeholder="Vnesite geslo" minlength="5" maxlength="10" required>
+          </div>
+
+          <input class="btn" type="submit" value="PRIJAVA">
+
+          <div class="links">
+            <a href="#">Ste pozabili geslo?</a>
+            <a href="#">Ste pozabili ID podpornika?</a>
+          </div>
+
+          <div class="hr"><span>Ali</span></div>
+
+          <div class="social">
+            <a href="#" role="button"><img src="img/fbLogo.svg" alt="Facebook Logo">Prijava preko Facebooka</a>
+            <a href="#" role="button"><img src="img/googleLogo.svg" alt="Google Logo">Prijava preko Googla</a>
+            <a href="#" class="apple" role="button" style="color: #fff;"><img src="img/appleLogo.svg" alt="Apple Logo">Prijava preko Appla</a>
+          </div>
+        </form>
+
+        <div class="noga">
+          Imate težave pri prijavi? <a href="#">Dobite pomoč</a>
+          <div style="margin-top:8px;font-size:12px;color:#666">
+            Dostop do <a href="index.html">McWeb</a>, <a href="#">Ticketing</a>, 
+            <a href="#">McDonalds</a> 
+          </div>
+          <div style="margin-top:10px;font-size:12px;color:#aaa">
+            © 2025 - Identiteta McDonalds - <a href="#">Politika zasebnosti</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
