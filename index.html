@@ -12,7 +12,30 @@
 <body>
 
 <header>
-  <canvas id="logo" width="140" height="90"></canvas>
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 700 450"
+  width="140"
+  height="90"
+  aria-label="Logo"
+  role="img"
+>
+  <path
+    fill="#ffcc00"
+    d="
+      M 464 402
+      C 488 11, 571 18, 590 427
+      C 591 428, 640 429, 640 429
+      C 630 35, 490 12, 444 201
+      C 375 4, 257 57, 247 428
+      C 247 429, 296 431, 294 431
+      C 306 12, 406 15, 415 404
+      C 415 404, 465 404, 464 402
+      Z
+    "
+  />
+</svg>
+
 
   <nav>
     <a href="#menu">Meni</a>
@@ -90,8 +113,54 @@
   </ul>
 </section>
 
-<footer>
-  © 2026 FastFood. Vse pravice pridržane.
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <canvas id="logo" width="140" height="90"></canvas>
+    </div>
+
+    <!-- Company info -->
+    <div class="footer-column">
+      <strong>ALPE-PANON d.o.o.</strong><br>
+      McDonald's DL<br>
+      Dunajska cesta 155<br>
+      1000 Ljubljana<br>
+      <a href="mailto:mcdkontakt@si.mcd.com">mcdkontakt@si.mcd.com</a>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-column">
+      <a href="#">Vaše mnenje</a>
+      <a href="#">Ceniki</a>
+      <a href="#">Ponudba</a>
+      <a href="#">Restavracije</a>
+      <a href="#">Posebna ponudba</a>
+    </div>
+
+    <div class="footer-column">
+      <a href="#">Kontakt</a>
+      <a href="#">Zaposlitev</a>
+      <a href="#">O nas</a>
+    </div>
+
+    <!-- Apps -->
+    <div class="footer-column footer-apps">
+      <img src="img/applestore.png" alt="App Store">
+      <img src="img/googleplay.png" alt="Google Play">
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>Piškotki</span>
+    <span>Splošni pogoji</span>
+    <span>Politika varstva zasebnosti</span>
+    <span>Dostopnost</span>
+    <span>Kazalo vsebine</span>
+    <span class="footer-right">Spletna stran: Futura</span>
+  </div>
 </footer>
 
 <script src="JS/script.js"></script>

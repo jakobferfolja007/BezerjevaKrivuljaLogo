@@ -21,7 +21,7 @@ body {
 header {
   background: var(--red);
   color: white;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,13 +146,64 @@ li {
   padding: 0.5rem 0;
 }
 
-footer {
-  background: #f5f5f5;
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
+/* FOOTER */
+.footer {
+  background: #fff;
+  padding: 40px 60px 20px;
+  border-top: 1px solid #eee;
 }
 
+.footer-container {
+  display: grid;
+  grid-template-columns: 160px 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: flex-start;
+  ;
+}
+
+.footer-column a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-column {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-apps img {
+  display: block;
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 13px;
+  color: #333;
+}
+
+.footer-right {
+  margin-left: auto;
+}
 @media (max-width: 768px) {
   .hero, .app {
     grid-template-columns: 1fr;
