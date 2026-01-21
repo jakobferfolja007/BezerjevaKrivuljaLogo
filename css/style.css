@@ -18,6 +18,7 @@ body {
   line-height: 1.6;
 }
 
+/* HEADER */
 header {
   background: var(--red);
   color: white;
@@ -56,32 +57,116 @@ nav a {
   opacity: 0.9;
 }
 
+/* SECTIONS */
 section {
   padding: 4rem 2rem;
   max-width: 1100px;
   margin: auto;
 }
 
-/* HERO */
+/* HERO SECTION - FULL WIDTH */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr; /* main hero + side blocks */
   gap: 2rem;
-  align-items: center;
+  align-items: start;
+  width: 90vw;        /* 90% širine zaslona */
+  max-width: 1200px;  /* največja širina */
+  margin: 0 auto;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  color: var(--red);
+/* glavni hero block z overlay */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* glavni hero + side blocks */
+  gap: 2rem;
+  align-items: start;
+  width: 90vw;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
-.hero-img {
-  height: 300px;
+/* glavni hero block */
+.hero-section {
+  position: relative;
+}
+
+.hero-section img {
+  width: 100%;
+  height: 570px;       /* višja slika */
+  object-fit: cover;
   border-radius: 30px;
- 
 }
 
-/* MENU */
+/* overlay text zgoraj levo */
+.hero-text {
+  position: absolute;
+  top: 20px;       /* razmik od vrha slike */
+  left: 0px;      /* razmik od leve strani */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* tekst na levo */
+  text-align: left;
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--yellow);
+  font-weight: 500;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero-text .btn {
+  font-size: 1rem;
+}
+
+/* side blocks */
+.side-blocks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  
+}
+
+
+.side-blocks .poravnavaSrede .poravnavaApp {
+  position: relative;
+  height: 280px;           /* višina div-a */
+  display: flex;           /* omogoči flex centriranje */
+  justify-content: center; /* horizontalno centriranje */
+  align-items: center;     /* vertikalno centriranje */
+  overflow: hidden;        /* da slika ne štrli iz div-a */
+  border-radius: 20px;
+}
+
+.side-blocks div {
+  position: relative;     /* da gumb pozicionira glede na starša */
+  height: 280px;          /* višina bloka */
+  border-radius: 20px;
+  overflow: visible;       /* slika ne štrli iz bloka */
+}
+
+.side-blocks img {
+  width: 100%;
+  height: 100%;           /* slika zapolni celoten div */
+  object-fit: cover;      /* ohrani razmerje in pokrije blok */
+  border-radius: 20px;
+  
+}
+
+/* gumb absolutno pozicioniran nad sliko */
+
+
+/* MENU SECTION */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -103,7 +188,7 @@ section {
   margin-bottom: 1rem;
 }
 
-/* PROMO */
+/* PROMO SECTION */
 .promo {
   background: var(--red);
   color: white;
@@ -112,7 +197,7 @@ section {
   text-align: center;
 }
 
-/* APP */
+/* APP SECTION */
 .app {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -128,7 +213,7 @@ section {
   background-position: center;
 }
 
-/* LOCATIONS */
+/* LOCATIONS SECTION */
 input {
   padding: 0.7rem;
   width: 100%;
@@ -163,7 +248,6 @@ li {
 .footer-logo {
   display: flex;
   align-items: flex-start;
-  ;
 }
 
 .footer-column a {
@@ -194,22 +278,29 @@ li {
   padding-top: 15px;
   border-top: 1px solid #eee;
   display: flex;
-  
   flex-wrap: wrap;
   gap: 20px;
   font-size: 13px;
   color: #333;
+ 
 }
 
 .footer-right {
   margin-left: auto;
 }
-@media (max-width: 768px) {
-  .hero, .app {
-    grid-template-columns: 1fr;
+
+/* RESPONSIVE HERO AND APP */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr; /* vse v eno kolono */
+    gap: 2rem;                  /* malo prostora med bloki */
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .side-blocks {
+    grid-template-columns: 1fr; /* side blocks vertikalno */
   }
 }
