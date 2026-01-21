@@ -35,7 +35,7 @@ function zamenjajSliko() {
   heroImg.src = slike[index];
 }
 
-setInterval(zamenjajSliko, 5000);
+setInterval(zamenjajSliko, 4000);
 
 /* CANVAS LOGO */
 const canvas = document.getElementById("logo");
