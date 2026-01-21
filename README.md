@@ -1,4 +1,4 @@
-# Fast Food Landing Page – Izobraževalni Projekt
+# McDonald's Page – Izobraževalni Projekt
 
 Replika promocijske strani McDonald's, narejena za učenje **HTML/CSS/JS** ter razumevanje strukture enostavnih spletnih menijev in akcijskih ponudb.  
 Projekt **ni povezan z McDonald's Corporation** – namenjen je izključno izobraževalnim in predstavitvenim ciljem.
