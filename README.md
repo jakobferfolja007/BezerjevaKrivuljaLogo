@@ -21,7 +21,7 @@ Vključuje:
 
 - Učenje **JavaScript**: preverjanje prijave, interaktivni gumbi, obvestila preko **SweetAlert2**  
 - Ponavljanje **HTML** in **CSS**: struktura strani, mrežni sistemi, oblikovanje kartic  
-- Razumevanje osnov **UI/UX** za spletne menije in promocijske akcije  
+- Učenje **Bezirjeve krivulje** in uporaba **<svg>** značke
 
 ---
 
