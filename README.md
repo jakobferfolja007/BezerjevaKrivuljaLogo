@@ -40,7 +40,8 @@ Vsi podatki, vključno s prijavnimi podatki, so **lokalni in zgolj demonstrativn
 - **HTML5** – struktura strani  
 - **CSS3** – oblikovanje in mrežni sistem  
 - **JavaScript** – interaktivnost, preverjanje prijave  
-- **SweetAlert2** – prijazna obvestila  
+- **SweetAlert2** – prijazna obvestila
+- **Bezirjeva Krivulja** - logoti
 
 ---
 
