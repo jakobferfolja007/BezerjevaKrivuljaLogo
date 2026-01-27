@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>McDonald's</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/mecdonalds.ico" type="image/icon-x">
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/mecdonalds.ico" type="image/icon-x">
 </head>
-
 <body>
 
-<header>
-  <svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 700 450"
-  width="140"
-  height="90"
-  aria-label="Logo"
-  role="img"
->
-  <path
+<header class="main-header">
+    <div class="header-container">
+        
+        <div class="logo-section">
+            <svg viewBox="0 0 700 450" width="120" height="80">
+                <path
     fill="#ffcc00"
     d="
       M 464 402
@@ -32,147 +26,125 @@
       C 306 12, 406 15, 415 404
       C 415 404, 465 404, 464 402
       Z
-    "
-  />
-</svg>
+      "  />
+            </svg>
+        </div>
+
+        <div class="nav-section">
+            <div class="top-bar">
+                <a href="#">Kontakt</a>
+                <a href="#">Zaposlitev</a>
+                <a href="#">O nas</a>
+                <a href="#">Vaše mnenje</a>
+            </div>
+            <nav class="bottom-bar">
+                <a href="#">Ponudba</a>
+                <a href="#">McCafé</a>
+                <a href="#">Restavracije</a>
+                <a href="#">Posebna ponudba</a>
+                <a href="#">Aplikacija</a>
+                <a href="#">Tu zate</a>
+                <a href="#">Naša hrana</a>
+            </nav>
+        </div>
+
+        <div class="actions-section">
+            <a href="login.html" class="btn-delivery">Prijava</a>
+            <a href="registration.html" class="btn-delivery">Registracija</a>
+        </div>
 
 
-  <nav>
-    <a href="#menu">Meni</a>
-    <a href="#akcije">Akcije</a>
-    <a href="#lokacije">Lokacije</a>
-    <button class="btn">Naroči zdaj</button>
-  </nav>
+    </div>
 </header>
 
-<section class="hero">
-  <!-- Glavni hero block -->
-  <div class="hero-section">
-    <img src="img/akcija3.jpg" alt="Zimska ponudba" class="hero-img">
-    <div class="hero-text">
-      <p>Posebna ponudba</p>
-      <h1>Legende so nazaj</h1>
-      <a href="#" class="btn" style="text-decoration: none; color: black;">Poglej ponudbo</a>
-    </div>
-  </div>
+<main>
+    <section class="hero-wrapper">
+        <div class="hero-main">
+            <img src="images/akcija3.jpg" alt="Glavna akcija - Bacon Rosti">
+            <div class="hero-content">
+                <span class="tag">Zimska ponudba</span>
+                <h1>Legenda je nazaj</h1>
+                <a href="#" class="btn-yellow">Poglej ponudbo</a>
+            </div>
+        </div>
 
-  <!-- Side blocks -->
-  <div class="side-blocks">
-  <div class="poravnavaSrede">
-    <img src="img/sreda.jpg" alt="Super sreda">
-  </div>
-  <div class="poravnavaApp">
-    <img src="img/aplikacija3.png" alt="Naloži aplikacijo"> 
-  </div>
-</div>
+        <aside class="hero-side">
+            <div class="side-block">
+                <img src="images/sreda.jpg" alt="Super sreda">
+            </div>
+            <div class="side-block">
+                <img src="images/aplikacija3.png" alt="Aplikacija MyMcDonalds">
+            </div>
+        </aside>
+    </section>
+
+   
+   <section class="store-locator">
+    <!-- Polovica: besedilo -->
+    <div class="locator-text">
+        <h2>Najdi najbližjo McDonald's restavracijo</h2>
+        <p>Uporabi interaktivno karto, da hitro najdeš restavracije v tvoji bližini. Klikni na ikono ali povleci karto za več informacij.</p>
+        <a href="https://www.google.com/maps/search/mcdonald's/@44.8864371,14.2048867,8z?entry=ttu&g_ep=EgoyMDI2MDEyNS4wIKXMDSoASAFQAw%3D%3D" class="btn-yellow" target="_blank">Pojdi na zemljevid</a>
+    </div>
+
+    <!-- Polovica: mapa -->
+    <div class="locator-map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.123456789012!2d14.5056!3d46.0569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c89123456789%3A0xabcdef1234567890!2sMcDonald%27s!5e0!3m2!1ssl!2ssi!4v1700000000000" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
 </section>
 
-<section id="menu">
-  <h2>Meni</h2>
-  <br/>
-  <div class="menu-grid">
-    <div class="card">
-      <img class="img" src="img/BigMac.jpg" alt="Burger">
-      <h3>Burger</h3>
-      <p>4.99 €</p>
-      <button class="btn">Dodaj</button>
-    </div>
-    <div class="card">
-      <img class="img" src="img/Fries.jpg" alt="Krompircek">
-      <h3>Krompirček</h3>
-      <p>2.49 €</p>
-      <button class="btn">Dodaj</button>
-    </div>
-    <div class="card">
-      <img class="img" src="img/Cola.jpg" alt="Pijača">
-      <h3>Pijača</h3>
-      <p>1.99 €</p>
-      <button class="btn">Dodaj</button>
-    </div>
-    <div class="card">
-      <img class="img" src="img/Mcflurry.jpg" alt="Sladica">
-      <h3>Sladica</h3>
-      <p>2.99 €</p>
-      <button class="btn">Dodaj</button>
-    </div>
-  </div>
-</section>
+</main>
 
-<section id="akcije" class="promo">
-  <h2>Posebna akcija!</h2>
-  <p>Burger + krompirček + pijača samo 6.99 €</p>
-</section>
-
-<section class="app">
-  <div>
-    <h2>McDonald aplikacija</h2>
-    <p>Naroči hitreje in brez čakanja.</p>
-    <br/>
-    <button class="btn" onclick="window.location.href='login.html'">Prijavi se</button>
-  </div>
-  <div class="phone"></div>
-</section>
-
-<section id="lokacije">
-  <h2>Lokacije</h2>
-  <input type="text" id="search" placeholder="Išči mesto..." />
-  <ul id="list">
-    <li>Ljubljana</li>
-    <li>Maribor</li>
-    <li>Koper</li>
-    <li>Celje</li>
-    <li>Kranj</li>
-  </ul>
-</section>
-
-<footer class="footer">
-  <div class="footer-container">
-
-    <!-- Logo -->
-    <div class="footer-logo">
-      <canvas id="logo" width="140" height="90"></canvas>
+<footer>
+    <div class="footer-top">
+        <div class="footer-logo">
+            <canvas id="logo" width="140" height="90"></canvas>
+        </div>
+        <div class="footer-contact">
+            <p><strong>ALPE-PANON d.o.o.</strong></p>
+            <p>McDonald's DL</p>
+            <p>Dunajska cesta 155, 1000 Ljubljana</p>
+            <p><a href="mailto:mcdkontakt@si.mcd.com">mcdkontakt@si.mcd.com</a></p>
+        </div>
+        <div class="footer-links">
+            <div>Vaše mnenje</div>
+            <div>Ceniki</div>
+            <div>Ponudba</div>
+            <div>Restavracije</div>
+        </div>
+        <div class="footer-links">
+            <div>Kontakt</div>
+            <div>Zaposlitev</div>
+            <div>O nas</div>
+        </div>
     </div>
 
-    <!-- Company info -->
-    <div class="footer-column">
-      <strong>ALPE-PANON d.o.o.</strong><br>
-      McDonald's DL<br>
-      Dunajska cesta 155<br>
-      1000 Ljubljana<br>
-      <a href="mailto:mcdkontakt@si.mcd.com">mcdkontakt@si.mcd.com</a>
+    <div class="footer-middle">
+        <div class="footer-social"></div>
+        <div class="footer-apps">
+            <img src="images/applestore.png" alt="App Store">
+            <img src="images/googleplay.png" alt="Google Play">
+        </div>
     </div>
 
-    <!-- Links -->
-    <div class="footer-column">
-      <a href="#">Vaše mnenje</a>
-      <a href="#">Ceniki</a>
-      <a href="#">Ponudba</a>
-      <a href="#">Restavracije</a>
-      <a href="#">Posebna ponudba</a>
+    <hr>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-links">
+            <span>Piškotki</span>
+            <span>Splošni pogoji</span>
+            <span>Zasebnost</span>
+        </div>
+        <div class="footer-credit">Spletna stran: <strong>Jakob Ferfolja</strong></div>
     </div>
-
-    <div class="footer-column">
-      <a href="#">Kontakt</a>
-      <a href="#">Zaposlitev</a>
-      <a href="#">O nas</a>
-    </div>
-
-    <!-- Apps -->
-    <div class="footer-column footer-apps">
-      <img src="img/applestore.png" alt="App Store">
-      <img src="img/googleplay.png" alt="Google Play">
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <a>Piškotki</a>
-    <a>Splošni pogoji</a>
-    <a>Politika varstva zasebnosti</a>
-    <a>Dostopnost</a>
-    <a>Kazalo vsebine</a>
-    <a class="footer-right">Spletna stran: Futura</a>
-  </div>
 </footer>
 
 <script src="JS/script.js"></script>

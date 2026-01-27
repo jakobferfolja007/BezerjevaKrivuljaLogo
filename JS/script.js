@@ -1,41 +1,4 @@
-/* SEARCH FILTER */
-const search = document.getElementById("search");
-const items = document.querySelectorAll("#list li");
 
-search.addEventListener("keyup", () => {
-  const value = search.value.toLowerCase();
-  items.forEach(item => {
-    item.style.display = item.textContent.toLowerCase().includes(value)
-      ? "block"
-      : "none";
-  });
-});
-
-/* SMOOTH SCROLL */
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-  });
-});
-
-const slike = [
-  "img/akcija.jpg",
-  "img/akcija2.jpg",
-  "img/akcija3.jpg"
-];
-
-const heroImg = document.querySelector(".hero-img");
-
-let index = 0;
-
-function zamenjajSliko() {
-  index = (index + 1) % slike.length;
-  heroImg.src = slike[index];
-}
-
-setInterval(zamenjajSliko, 4000);
 
 /* CANVAS LOGO */
 const canvas = document.getElementById("logo");

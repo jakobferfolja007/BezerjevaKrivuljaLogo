@@ -1,306 +1,388 @@
+/* =========================================
+   ROOT SPREMENLJIVKE
+========================================= */
 :root {
-  --red: #DA291C;
-  --yellow: #FFC72C;
-  --white: #ffffff;
-  --dark: #222;
+    --color-bg: #ffffff;
+    --color-footer-bg: #f5f5f5;
+    --color-text: #333333;
+    --color-link: #000000;
+    --color-link-hover: #ffbc0d;
+    --color-btn: #ffbc0d;
+    --color-btn-hover: #e5a800;
 }
 
+/* =========================================
+   OSNOVNE NASTAVITVE
+========================================= */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background: var(--white);
-  color: var(--dark);
-  line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
 }
 
-/* HEADER */
-header {
-  background: var(--red);
-  color: white;
-  padding: 1rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    transition: 0.2s;
 }
 
-#logo {
-  cursor: pointer;
+a:hover {
+    color: var(--color-link-hover);
 }
 
-nav a {
-  color: white;
-  margin-right: 1rem;
-  text-decoration: none;
-  font-weight: 500;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.btn {
-  background: var(--yellow);
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 999px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s, opacity 0.2s;
+/* =========================================
+   HEADER
+========================================= */
+.main-header {
+    background: var(--color-bg);
+    padding: 15px 5%;
+    width: 100%;
+    border-bottom: 1px solid #eee;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
-/* SECTIONS */
-section {
-  padding: 4rem 2rem;
-  max-width: 1100px;
-  margin: auto;
+.logo-section {
+    display: flex;
+    align-items: center;
 }
 
-/* HERO SECTION - FULL WIDTH */
-.hero {
-  display: grid;
-  grid-template-columns: 2fr 1fr; /* main hero + side blocks */
-  gap: 2rem;
-  align-items: start;
-  width: 90vw;        /* 90% širine zaslona */
-  max-width: 1200px;  /* največja širina */
-  margin: 0 auto;
+.nav-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+    margin-left: 50px;
 }
 
-/* glavni hero block z overlay */
-.hero {
-  display: grid;
-  grid-template-columns: 2fr 1fr; /* glavni hero + side blocks */
-  gap: 2rem;
-  align-items: start;
-  width: 90vw;
-  max-width: 2000px;
-  margin: 0 auto;
+.top-bar {
+    display: flex;
+    gap: 20px;
 }
 
-/* glavni hero block */
-.hero-section {
-  position: relative;
+.top-bar a {
+    color: #555;
+    font-size: 13px;
 }
 
-.hero-section img {
-  width: 100%;
-  height: 570px;       /* višja slika */
-  object-fit: cover;
-  border-radius: 30px;
+.top-bar a:hover {
+    text-decoration: underline;
 }
 
-/* overlay text zgoraj levo */
-.hero-text {
-  position: absolute;
-  top: 20px;       /* razmik od vrha slike */
-  left: 0px;      /* razmik od leve strani */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* tekst na levo */
-  text-align: left;
-  color: var(--white);
-  padding: 1rem;
-  border-radius: 15px;
+.bottom-bar {
+    display: flex;
+    gap: 20px;
 }
 
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: var(--yellow);
-  font-weight: 500;
+.bottom-bar a {
+    color: var(--color-link);
+    font-weight: 900;
+    font-size: 15px;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
+.bottom-bar a:hover {
+    color: var(--color-link-hover);
 }
 
-.hero-text .btn {
-  font-size: 1rem;
+.actions-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-/* side blocks */
-.side-blocks {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  
+.btn-delivery {
+    background: var(--color-btn);
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btn-delivery:hover {
+    background: var(--color-btn-hover);
+}
+
+/* =========================================
+   HERO SEKCIJA
+========================================= */
+.hero-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 2070px;
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.hero-main {
+    flex: 3;
+    position: relative;
+    height: 100%;
+}
+
+.hero-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.btn-yellow {
+    display: inline-block;
+    background: var(--color-btn);
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.hero-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1rem;
+}
+
+.side-block {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.side-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.side-block:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   DRUGE SEKCIJE
+========================================= */
+.section {
+    max-width: 2070px;
+    margin: 70px auto;
+    min-height: 500px;
+    background: var(--color-bg);
+    padding: 2rem 5%;
+}
+.store-locator {
+    display: flex;
+    flex-wrap: wrap; /* za responsive */
+    gap: 30px;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 40px 0;
+    
+    max-width: 2070px;  
+    margin: 40px auto;   
+}
+
+.locator-text {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.locator-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #0f0000; 
+}
+
+.locator-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn-yellow {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    align-self: flex-start;
+}
+
+.btn-yellow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: #000;
+}
+
+.locator-map {
+    flex: 1 1 50%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 
-.side-blocks .poravnavaSrede .poravnavaApp {
-  position: relative;
-  height: 280px;           /* višina div-a */
-  display: flex;           /* omogoči flex centriranje */
-  justify-content: center; /* horizontalno centriranje */
-  align-items: center;     /* vertikalno centriranje */
-  overflow: hidden;        /* da slika ne štrli iz div-a */
-  border-radius: 20px;
+
+/* Responsive: na manjših zaslonih naj bo ena pod drugo */
+@media (max-width: 900px) {
+    .store-locator {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .locator-text, .locator-map {
+        flex: 1 1 100%;
+    }
 }
 
-.side-blocks div {
-  position: relative;     /* da gumb pozicionira glede na starša */
-  height: 280px;          /* višina bloka */
-  border-radius: 20px;
-  overflow: visible;       /* slika ne štrli iz bloka */
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background-color: var(--color-footer-bg);
+    padding: 50px 10% 20px 10%;
+    margin: 40px auto 0 auto;
+    border-top: 1px solid #eee;  
+    width: 100%;
 }
 
-.side-blocks img {
-  width: 100%;
-  height: 100%;           /* slika zapolni celoten div */
-  object-fit: cover;      /* ohrani razmerje in pokrije blok */
-  border-radius: 20px;
-  
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
-/* gumb absolutno pozicioniran nad sliko */
-
-
-/* MENU SECTION */
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+.footer-top > div {
+    flex: 1;
+    min-width: 200px;
 }
 
-.card {
-  background: white;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  text-align: center;
+.footer-contact p {
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
-.card .img {
-  height: 120px;
-  background: #eee;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+.footer-links div {
+    line-height: 2.2;
+    font-size: 15px;
+    cursor: pointer;
 }
 
-/* PROMO SECTION */
-.promo {
-  background: var(--red);
-  color: white;
-  border-radius: 1.5rem;
-  padding: 3rem;
-  text-align: center;
+.footer-links div:hover {
+    text-decoration: underline;
 }
 
-/* APP SECTION */
-.app {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-.phone {
-  height: 300px;
-  border-radius: 30px;
-  background-image: url("../img/aplikacija3.png");
-  background-size: cover;  
-  background-position: center;
-}
-
-/* LOCATIONS SECTION */
-input {
-  padding: 0.7rem;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 0.5rem;
-  border: 1px solid #ccc;
-  margin-bottom: 1rem;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  padding: 0.5rem 0;
-}
-
-/* FOOTER */
-.footer {
-  background: #fff;
-  padding: 40px 60px 20px;
-  border-top: 1px solid #eee;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: 160px 1fr 1fr 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: flex-start;
-}
-
-.footer-column a {
-  display: block;
-  color: #000;
-  text-decoration: none;
-  margin-bottom: 8px;
-  font-size: 14px;
-}
-
-.footer-column a:hover {
-  text-decoration: underline;
-}
-
-.footer-column {
-  font-size: 14px;
-  line-height: 1.6;
+.footer-apps {
+    display: flex;
+    gap: 12px;
 }
 
 .footer-apps img {
-  display: block;
-  width: 140px;
-  margin-bottom: 10px;
+    height: 40px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 20px;
 }
 
 .footer-bottom {
-  margin-top: 40px;
-  padding-top: 15px;
-  border-top: 1px solid #eee;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  font-size: 13px;
-  color: #333;
- 
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #666;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.footer-right {
-  margin-left: auto;
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
 }
 
-/* RESPONSIVE HERO AND APP */
-@media (max-width: 1024px) {
-  .hero {
-    grid-template-columns: 1fr; /* vse v eno kolono */
-    gap: 2rem;                  /* malo prostora med bloki */
-  }
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 1100px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-section {
+        margin-left: 0;
+        align-items: center;
+    }
 
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
+    .hero-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
 
-  .side-blocks {
-    grid-template-columns: 1fr; /* side blocks vertikalno */
-  }
+    .hero-side {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        left: 20px;
+        top: 30px;
+    }
 }
