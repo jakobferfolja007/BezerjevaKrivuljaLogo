@@ -1,0 +1,468 @@
+/* =========================================
+   ROOT SPREMENLJIVKE
+========================================= */
+:root {
+    --color-bg: #ffffff;
+    --color-footer-bg: #f5f5f5;
+    --color-text: #333333;
+    --color-link: #000000;
+    --color-link-hover: #ffbc0d;
+    --color-btn: #ffbc0d;
+    --color-btn-hover: #000000;
+}
+
+/* =========================================
+   OSNOVNE NASTAVITVE
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.main-header {
+    background: var(--color-bg);
+    padding: 15px 5%;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.nav-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+    margin-left: 50px;
+}
+
+.top-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.top-bar a {
+    color: #555;
+    font-size: 13px;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+.bottom-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-bar a {
+    color: var(--color-link);
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.bottom-bar a:hover {
+    color: var(--color-link-hover);
+}
+
+.actions-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-delivery {
+    background: var(--color-btn);
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btn-delivery:hover {
+    background: var(--color-btn-hover);
+}
+
+/* =========================================
+   HERO SEKCIJA
+========================================= */
+.hero-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 2070px;
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.hero-main {
+    flex: 3;
+    position: relative;
+    height: 100%;
+}
+
+.hero-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.btn-yellow {
+    display: inline-block;
+    background: var(--color-btn);
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.hero-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+
+.side-block {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.side-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.side-block:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================
+    SEKCIJE
+========================================= */
+.section {
+    max-width: 2070px;
+    margin: 70px auto;
+    min-height: 500px;
+    background: var(--color-bg);
+    padding: 2rem 5%;
+}
+/* =========================================
+    ZEMLEVID SEKCIJE
+========================================= */
+.store-locator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 5%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    max-width: 2070px;
+    margin: 40px auto;
+}
+
+.store-locator-image img {
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.store-locator-text {
+    max-width: 600px;
+}
+
+.store-locator-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #0f0000;
+}
+
+.store-locator-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.store-locator-text .btn-yellow {
+    font-size: 1rem;
+}
+
+/* =========================================
+   ADVERTISE SEKCIJA
+========================================= */
+
+
+.advertise {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 5%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    max-width: 2070px;  
+    margin: 40px auto;   
+}
+
+.advertise-image img {
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    
+}
+.advertise-content {
+    max-width: 600px;
+}
+.advertise-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #0f0000; 
+}
+.advertise-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+.advertise-content .btn-yellow {
+    font-size: 1rem;
+}
+
+/* =========================================
+   HIGHLITE SEKCIJA
+========================================= */
+
+.food-highlights {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 5%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    max-width: 2070px;
+    margin: 40px auto;
+}
+
+.food-highlights .section-image img {
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.food-highlights .section-text {
+    max-width: 600px;
+}
+
+.food-highlights .section-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #0f0000;
+}
+
+.food-highlights .section-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.food-highlights .section-text .btn-yellow {
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background-color: var(--color-footer-bg);
+    padding: 50px 10% 20px 10%;
+    margin: 40px auto 0 auto;
+    border-top: 1px solid #eee;  
+    width: 100%;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-top > div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-contact p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.footer-links div {
+    line-height: 2.2;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.footer-links div:hover {
+    text-decoration: underline;
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-apps {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-apps img {
+    height: 40px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #666;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-delivery,
+.btn-yellow {
+    background-color: var(--color-btn); /* rumena McDonald's */
+    color: #000; /* črn tekst */
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover efekt – zamenja barvi */
+.btn-delivery:hover,
+.btn-yellow:hover {
+    background-color: #000; /* črno ozadje */
+    color: var(--color-btn); /* rumen tekst */
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 1100px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-section {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-side {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        left: 20px;
+        top: 30px;
+    }
+}
