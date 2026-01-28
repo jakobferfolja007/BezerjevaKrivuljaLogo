@@ -337,30 +337,8 @@ img {
 .food-highlights .section-text .btn-yellow {
     font-size: 1rem;
 }
-/* =========================================
-   GUMBI
-========================================= */
-.btn-delivery,
-.btn-yellow {
-    background-color: var(--color-btn); /* rumena McDonald's */
-    color: #000; /* črn tekst */
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 15px;
-    text-align: center;
-    display: inline-block;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
 
-/* Hover efekt – zamenja barvi */
-.btn-delivery:hover,
-.btn-yellow:hover {
-    background-color: #000; /* črno ozadje */
-    color: var(--color-btn); /* rumen tekst */
-}
+
 /* =========================================
    FOOTER
 ========================================= */
@@ -436,6 +414,28 @@ hr {
     gap: 20px;
 }
 
+.btn-delivery,
+.btn-yellow {
+    background-color: var(--color-btn); /* rumena McDonald's */
+    color: #000; /* črn tekst */
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover efekt – zamenja barvi */
+.btn-delivery:hover,
+.btn-yellow:hover {
+    background-color: #000; /* črno ozadje */
+    color: var(--color-btn); /* rumen tekst */
+}
+
 /* =========================================
    RESPONSIVE
 ========================================= */
@@ -466,5 +466,3 @@ hr {
         top: 30px;
     }
 }
-
-
