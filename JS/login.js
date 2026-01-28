@@ -51,3 +51,5 @@ function sporocilo(event){
           confirmButtonColor: "#000000ff"
         });
       }
+
+      

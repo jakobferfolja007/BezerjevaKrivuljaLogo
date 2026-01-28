@@ -200,7 +200,7 @@ img {
 }
 
 /* =========================================
-   DRUGE SEKCIJE
+    SEKCIJE
 ========================================= */
 .section {
     max-width: 2070px;
@@ -209,75 +209,133 @@ img {
     background: var(--color-bg);
     padding: 2rem 5%;
 }
+/* =========================================
+    ZEMLEVID SEKCIJE
+========================================= */
 .store-locator {
     display: flex;
-    flex-wrap: wrap; /* za responsive */
-    gap: 30px;
-    padding: 40px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 5%;
+    background-color: #ffffff;
     border-radius: 15px;
-    margin: 40px 0;
-    
-    max-width: 2070px;  
-    margin: 40px auto;   
+    max-width: 2070px;
+    margin: 40px auto;
 }
 
-.locator-text {
-    flex: 1 1 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
+.store-locator-image img {
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
 }
 
-.locator-text h2 {
+.store-locator-text {
+    max-width: 600px;
+}
+
+.store-locator-text h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    color: #0f0000; 
+    color: #0f0000;
 }
 
-.locator-text p {
+.store-locator-text p {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 20px;
     color: #333;
 }
 
-.btn-yellow {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #ffcc00;
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    align-self: flex-start;
+.store-locator-text .btn-yellow {
+    font-size: 1rem;
 }
 
-.btn-yellow:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    color: #000;
-}
+/* =========================================
+   ADVERTISE SEKCIJA
+========================================= */
 
-.locator-map {
-    flex: 1 1 50%;
+
+.advertise {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 5%;
+    background-color: #ffffff;
     border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 2070px;  
+    margin: 40px auto;   
 }
 
+.advertise-image img {
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    
+}
+.advertise-content {
+    max-width: 600px;
+}
+.advertise-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #0f0000; 
+}
+.advertise-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+.advertise-content .btn-yellow {
+    font-size: 1rem;
+}
 
+/* =========================================
+   HIGHLITE SEKCIJA
+========================================= */
 
-/* Responsive: na manjših zaslonih naj bo ena pod drugo */
-@media (max-width: 900px) {
-    .store-locator {
-        flex-direction: column;
-        padding: 20px;
-    }
-    .locator-text, .locator-map {
-        flex: 1 1 100%;
-    }
+.food-highlights {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 5%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    max-width: 2070px;
+    margin: 40px auto;
+}
+
+.food-highlights .section-image img {
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+.food-highlights .section-text {
+    max-width: 600px;
+}
+
+.food-highlights .section-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #0f0000;
+}
+
+.food-highlights .section-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.food-highlights .section-text .btn-yellow {
+    font-size: 1rem;
 }
 
 
