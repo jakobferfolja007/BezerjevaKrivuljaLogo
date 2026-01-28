@@ -11,12 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroTag = document.getElementById('hero-tag');
     const heroTitle = document.getElementById('hero-title');
 
-    setInterval(() => {
-        slideIndex = (slideIndex + 1) % heroSlides.length;
-        heroImg.src = heroSlides[slideIndex].image;
-        heroTag.textContent = heroSlides[slideIndex].tag;
-        heroTitle.innerHTML = heroSlides[slideIndex].title;
-    }, 4000);
+    // Preveri, če so elementi najdeni
+    if(heroImg && heroTag && heroTitle){
+        setInterval(() => {
+            slideIndex = (slideIndex + 1) % heroSlides.length;
+            heroImg.src = heroSlides[slideIndex].image;
+            heroTag.textContent = heroSlides[slideIndex].tag;
+            heroTitle.innerHTML = heroSlides[slideIndex].title;
+        }, 4000);
+    } else {
+        console.error("Hero slider elementi niso najdeni!");
+    }
+
+
 
     const images = [
         'images/BigMac.jpg',
