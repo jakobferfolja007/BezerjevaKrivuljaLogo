@@ -6,9 +6,9 @@
     --color-footer-bg: #f5f5f5;
     --color-text: #333333;
     --color-link: #000000;
-    --color-link-hover: #ffbc0d;
+    --color-link-hover: #000000;
     --color-btn: #ffbc0d;
-    --color-btn-hover: #e5a800;
+    --color-btn-hover: #000000;
 }
 
 /* =========================================
@@ -444,4 +444,3 @@ hr {
         top: 30px;
     }
 }
-
