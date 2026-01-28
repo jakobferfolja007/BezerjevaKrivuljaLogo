@@ -178,7 +178,7 @@ img {
     display: flex;
     flex-direction: column;
     height: 100%;
-    gap: 1rem;
+    
 }
 
 .side-block {
@@ -444,3 +444,4 @@ hr {
         top: 30px;
     }
 }
+
